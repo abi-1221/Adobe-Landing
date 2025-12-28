@@ -1,0 +1,339 @@
+/* content of style.css */
+:root {
+    --bg-color: #FFFFFF;
+    --text-primary: #2D2E2D;
+    --text-secondary: #5E5E5E;
+    --accent-color: #FA0C00;
+    --accent-hover: #D00A00;
+    --surface-color: #F8F8F8;
+    --border-subtle: #EAEAEA;
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+.nav-cta {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.nav-cta:hover {
+    color: var(--accent-hover);
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--surface-color);
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    color: #111;
+}
+
+.price {
+    color: var(--accent-color);
+    white-space: nowrap;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-weight: 400;
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(250, 12, 0, 0.2);
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(250, 12, 0, 0.3);
+}
+
+.cta-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: -0.02em;
+}
+
+/* What's Included */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+    justify-content: center;
+}
+
+.app-card {
+    background: var(--surface-color);
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+}
+
+.app-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.app-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.more-apps {
+    background: #111;
+    color: white;
+}
+
+.more-apps p {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Benefits */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* How It Works */
+.steps-row {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    background: var(--surface-color);
+    border-radius: 20px;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(0,0,0,0.05);
+    margin-bottom: -20px;
+    z-index: 0;
+}
+
+.step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    z-index: 1;
+}
+
+.step p {
+    color: var(--text-secondary);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .steps-row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .step {
+        flex: 1;
+        background: transparent;
+    }
+}
+
+/* FAQ */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0 40px;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .primary-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .app-card {
+        padding: 16px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+    animation: fadeIn 0.8s ease-out;
+}
